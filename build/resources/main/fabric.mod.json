@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ore_outlines",
+  "version": "1.0.0",
+  "name": "Ore Outlines",
+  "description": "Highlights nearby ores and lava on the client.",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.kodari.oreoutlines.OreOutlinesClient"],
+    "modmenu": ["com.kodari.oreoutlines.ModMenuIntegration"]
+  },
+  "mixins": [{ "config": "ore_outlines.client.mixins.json", "environment": "client" }],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*",
+    "yet_another_config_lib_v3": ">=3.9.0"
+  },
+  "suggests": { "modmenu": ">=21.0.0" }
+}
